@@ -1,0 +1,32 @@
+if &compatible
+  set nocompatible               " Be iMproved
+endif
+
+let mapleader = ","
+
+set nocompatible
+filetype plugin on
+syntax on
+
+set number
+set relativenumber
+
+colorscheme peachpuff
+set encoding=utf-8
+
+set scrolloff=5
+
+""" Set tabs to 4 spaces
+filetype plugin indent on
+
+autocmd FileType *      set tabstop=8|set shiftwidth=8|set expandtab
+autocmd FileType python set tabstop=2|set shiftwidth=2|set expandtab
+autocmd FileType go     set tabstop=4|set shiftwidth=4|set noexpandtab
+autocmd FileType yaml   set tabstop=2|set shiftwidth=2|set expandtab
+autocmd FileType make   set tabstop=2|set shiftwidth=2|set noexpandtab
+autocmd FileType html   set tabstop=2|set shiftwidth=2|set noexpandtab
+autocmd FileType vue    set tabstop=2|set shiftwidth=2|set noexpandtab
+autocmd FileType json   set tabstop=2|set shiftwidth=2|set noexpandtab
+
+nnoremap <Leader>n :bnext<CR>
+nmap ; :
