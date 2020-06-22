@@ -1,0 +1,56 @@
+if &compatible
+  set nocompatible               " Be iMproved
+endif
+
+" Required:
+set runtimepath+=/home/rseichais/.vim/bundle/neobundle.vim/
+
+" Required:
+call neobundle#begin(expand('/home/rseichais/.vim/bundle'))
+
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" Add or remove your Bundles here:
+NeoBundle 'leafgarland/typescript-vim'
+
+" Required:
+call neobundle#end()
+
+" Required:
+filetype plugin indent on
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
+
+let mapleader = ","
+
+set nocompatible
+filetype plugin on
+syntax on
+
+set number
+set relativenumber
+
+colorscheme koehler
+set encoding=utf-8
+
+set scrolloff=5
+
+" Latex Viewer
+let g:livepreview_previewer = 'evince'
+let g:livepreview_engine    = 'pdflatex'
+
+""" Set tabs to 4 spaces
+filetype plugin indent on
+" show existing tabs as 4 spaces
+set tabstop=4
+" when indenting with ">", use 4 space width
+set shiftwidth=4
+" when indneting with "tab"
+set expandtab
+
+nnoremap <Leader>n :bnext<CR>
+
