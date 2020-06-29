@@ -80,11 +80,17 @@ map <Leader><SPACE> :Goyo<CR>
 map <Leader>o :LF<CR>
 
 " Split settings
-nmap <Leader>v :vsplit
-nmap <Leader>h :split
+nmap <Leader>v :vsplit<CR>
+nmap <Leader>h :split<CR>
 
 set splitbelow splitright
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+
+" Manually set filetypes per extension
+augroup filedetecttype
+  " Template manifests in VKS addons
+  autocmd       BufNewFile,BufRead      *.yaml.tmpl,*.yml.ympl     set syntax=yaml
+augroup END
